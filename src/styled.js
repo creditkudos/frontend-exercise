@@ -14,15 +14,13 @@ export const AppWrapper = styled.div`
 `;
 
 export const PlaceholderRow = styled.div`
-  ${({ theme }) => `
+  display: flex;
+  > div {
     display: flex;
-    > div {
-      display: flex;
-      &:first-child {
-        flex: 1;
-      }
+    &:first-child {
+      flex: 1;
     }
-  `}
+  }
 `;
 
 export const AppBody = styled.div`

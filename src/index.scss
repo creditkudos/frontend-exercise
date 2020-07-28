@@ -1,0 +1,8 @@
+@import "./lib/tokens.scss";
+
+html,
+body {
+  padding: 0 #{$spacing-sm-earth}rem;
+  margin: 0;
+  background-color: #{$color-gray-10};
+}

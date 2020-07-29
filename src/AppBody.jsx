@@ -11,7 +11,7 @@ const AppBody = () => {
         <span style={{ marginRight: `${theme.SpacingSmMoon}rem` }}>
           App Body content goes here
         </span>
-        <Icon name="tick"></Icon>
+        <Icon name="tick" />
       </div>
     </StyledAppBody>
   );

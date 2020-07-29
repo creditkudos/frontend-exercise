@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Credit Kudos frontend exercise
 
-## Available Scripts
+## Setup
 
-In the project directory, you can run:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), meaning that, after installing `yarn` (if necessary), you can just run `yarn start` in the project directory to set up a local development environment.
 
-### `yarn start`
+Out of the box, you have access to the following tools:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- `react` 16.13.1
+- `react-redux` 7.2.1
+- `styled-components` 5.1.1 (for if your styling preference is `styled-components`)
+- `node-sass` 4.14.1 (for if your styling preference is SASS, regular CSS is also able to be used)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+It's worth mentioning that this project is just a base starting point to get you going quickly, please do add whatever additional packages you wish to use and modify this project how you will.
 
-### `yarn test`
+## Design system
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project contains a stripped-down version of Credit Kudos' `Pando` design system, including spacing, colour, breakpoint and typography tokens (for usage inside your styling logic), and an `Icon` component. These tokens are importable via `lib/theme.js` either on a per-token basis (i.e. `import { ColorViolet50 } from "./lib/theme`), or all at once via a wildcard object (`import theme from "./lib/theme"`). A full record of available tokens is available in `lib/tokens.js`. Alternatively, they are accessible as SASS variables in `lib/tokens.scss`.
 
-### `yarn build`
+For a contextual view of these tokens expressed visually, please refer to the (currently under-development) [Pando online guide](https://pando.creditkudos.com/).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Icon component
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The Icon component (`lib/Icon.jsx`) takes one property, `name`, which corresponds to the filename of the SVG asset to reference. These SVG assets are contained in `lib/Icon/icons/expenditure` (for category-themed icons) and `lib/Icon/icons/interface` (for UX-oriented icons).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Example Icon usage:
 
-### `yarn eject`
+```
+<Icon name="tick" />
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Mock data
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To assist you in building your example project, mock data is also provided via `lib/data.js`, importable as an array of objects to mirror a basic API response for category-organised transactions. A static array of data is available as a default export from `lib/data.js`, but an alternate version where values are randomly generated per invokation is also available via the exported `randomData` object.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Development starting point
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The project is visually structured to very loosely resemble Atlas, Credit Kudos' flagship underwriting platform, to provide a little bit of visual context when developing the feature associated with this exercise. It's recommended that the `AppBody` component is used as the starting point for your work. `index.scss` currently handles global CSS styling, and individual components are styled using `styled-components`, though feel free to modify this.

@@ -9,7 +9,7 @@ const AppBody = () => {
     <StyledAppBody>
       <div style={{ display: "flex", alignItems: "center" }}>
         <span style={{ marginRight: `${theme.SpacingSmMoon}rem` }}>
-          App Body content goes here
+          App body content goes here
         </span>
         <Icon name="tick" />
       </div>

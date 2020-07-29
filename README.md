@@ -2,7 +2,7 @@
 
 ## Setup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), meaning that, after installing `yarn` (if necessary), you can just run `yarn start` in the project directory to set up a local development environment.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), meaning that, after installing `yarn` (if necessary), you can just run `yarn` in the project directory to install the required packages, and then `yarn start` to launch a local development environment.
 
 Out of the box, you have access to the following tools:
 

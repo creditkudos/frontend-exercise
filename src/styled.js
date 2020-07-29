@@ -26,6 +26,11 @@ export const PlaceholderRow = styled.div`
 export const AppBody = styled.div`
   ${({ theme }) => `
     padding: ${theme.SpacingSmEarth}rem;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   `}
 `;
 

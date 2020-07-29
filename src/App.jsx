@@ -1,17 +1,14 @@
 import React from "react";
 
-import { AppWrapper, AppBody } from "./styled";
+import { AppWrapper } from "./styled";
 import AppHeader from "./AppHeader";
-import Icon from "./lib/Icon";
+import AppBody from "./AppBody";
 
 function App() {
   return (
     <AppWrapper>
       <AppHeader />
-      <AppBody>
-        Body content goes here
-        <Icon name="utilities"></Icon>
-      </AppBody>
+      <AppBody />
     </AppWrapper>
   );
 }

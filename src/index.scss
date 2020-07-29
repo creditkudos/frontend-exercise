@@ -1,8 +1,41 @@
 @import "./lib/tokens.scss";
 
+@font-face {
+  font-family: "CircularStd";
+  src: url("./lib/fonts/CircularStd-Book.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("./lib/fonts/CircularStd-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("./lib/fonts/CircularStd-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("./lib/fonts/CircularStd-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: fallback;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   background-color: #{$color-gray-10};
+  font-family: "CircularStd";
 }
